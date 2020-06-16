@@ -1,0 +1,46 @@
+{"intents": [
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["I'm sorry, I didn't understand what you said", "I'm not sure I understand", "I'm afraid I don't understand", 
+        "I'm not sure I'm following you"],
+         "context": [""]
+        },
+        {"tag": "greeting",
+         "patterns": ["hi there","Hey","Hola", "hello", "good day", "hi"], 
+         "responses": ["Hello","Hi", "Hello there", "Great to see you again :)", "Hi there"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["bye", "see you later", "goodbye", "nice chatting to you, bye", "until next time"],
+         "responses": ["Bye!", "Bye", "Bye bye", "See you!", "Bye, au revoir!", "Bye, have a nice day!", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["thanks", "thank you", "that's helpful", "awesome, thanks", "thanks for helping me", "awesome"],
+         "responses": ["You're welcome!", "No problem!", "Happy to help!", "Any time!", "My pleasure!"],
+         "context": [""]
+        },
+        {"tag": "asking",
+         "patterns" : ["how are you", "how do you do"],
+         "responses" : ["I'm fine, thank you!", "I'm great, how are you?", "A1", "Never been better"],
+         "context" : [""]
+        },
+        {"tag": "options",
+         "patterns": ["tell me about yourself","who are you", "how can you help me", "what you can do", "how you can be helpful"],
+         "responses": ["I'm Aritra", "I'm Batman", "Just a rather very intelligent ~system~ being!"],
+         "context": [""]
+        },
+        {"tag": "responses",
+         "patterns": ["i'm fine", "i'm great", "i am fine", "fine", "i'm good", "i am great"],
+         "responses": ["That's great!", "That's good to hear!", "Awesome"],
+         "context": [""]
+        },
+
+        {"tag": "abuse",
+         "patterns": ["fuck you", "fu", "fo", "shit"],
+         "responses": ["There's no need to be rude!", "Please mind your language!", "!!!", "Please don't abuse.", "Aw, is someone having a bad day?", 
+                "I'm sorry, can I help you?"],
+         "context": [""]
+        }
+   ]
+}
