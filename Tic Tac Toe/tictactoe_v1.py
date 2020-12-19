@@ -235,7 +235,7 @@ if __name__ == "__main__":
     main()
 
 '''Interesting future possibilities:
-1. Larger boadr
+1. Larger board
 2. More players?
 3. Other game (like connect 4)
 4. Animation and timing
