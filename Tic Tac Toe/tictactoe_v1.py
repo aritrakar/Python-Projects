@@ -183,7 +183,7 @@ def bestMove2(board, depth):
                 if(score > bestScore):
                     bestScore = score
                     move = (i, j)
-    print("Comptuer's move: {m}".format(m=move))
+    print("Computer's move: {m}".format(m=move))
     updateBoard(board, move, ai)
 
 def aiAgent2(board, depth):
