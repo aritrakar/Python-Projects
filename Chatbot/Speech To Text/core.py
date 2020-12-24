@@ -45,20 +45,16 @@ DOCUMENT_PROMPTS = ["create a document",
 WEATHER_PROMPTS = ["what's the weather like",
                    "get the weather", "what is it like outside"]
 
-WEATHER_API_KEY = "53479e05bf5d71b6f46810e35ece23c3"
+WEATHER_API_KEY = "REMOVED DUE TO SECURITY REASONS"
 
-SPOTIFY = {"client_id": "8659c94401ce481fb99ece37495dcfd8",
-           "client_secret": "3062815a92e9451abc830bb0329530df",
-           "user_id": "q4thf6ej3my2h8qpp0cum4ufo",
+SPOTIFY = {"client_id": "REMOVED DUE TO SECURITY REASONS",
+           "client_secret": "REMOVED DUE TO SECURITY REASONS",
+           "user_id": "REMOVED DUE TO SECURITY REASONS",
            "username": "AnonymousIbex",
            "scope": "user-library-read user-read-currently-playing user-read-recently-played user-read-playback-state user-top-read user-modify-playback-state",
            "redirect_uri": "https://open.spotify.com/"}
 
 count = 0
-#SPOTIFY_CLIENT_ID = "8659c94401ce481fb99ece37495dcfd8"
-#SPOTIFY_CLIENT_SECRET = "3062815a92e9451abc830bb0329530df"
-#SPOTIFY_USER_ID = 'q4thf6ej3my2h8qpp0cum4ufo'
-# SPOTIFY_REDIRECT_URI = "https://open.spotify.com/"  # Or "https://www.google.in/"
 
 ### CORE FUNCTIONS ###
 
@@ -171,7 +167,7 @@ def note(text):
     subprocess.Popen(["notepad.exe", file_name])
 
 
-###GOOGLE APIs###
+### GOOGLE APIs ###
 
 def authenticateGoogle():
     creds = None
@@ -311,86 +307,6 @@ def googleSearch(text, n):
         googleSearch(text, n+3)
 
 
-'''
-def getSongSpotify(song):
-    song = song.replace("play", "")
-    auth_manager = SpotifyClientCredentials(
-        client_id=SPOTIFY_CLIENT_ID, client_secret=SPOTIFY_CLIENT_SECRET)
-    spotifyObject = spotipy.Spotify(auth_manager=auth_manager)
-    playlists = spotifyObject.user_playlists(SPOTIFY_USER_ID)
-    user = spotifyObject.user(SPOTIFY_USER_ID)
-    print(user)
-    # devices = spotifyObject.devices()
-    # deviceID = devices['devices'][0]['id']
-    # print(devices)
-
-    playlistURIS = []
-    while playlists:
-        for i, playlist in enumerate(playlists['items']):
-            playlistURIS.append(playlist['uri'])
-            # print("%4d %s %s" % (
-            #   i + 1 + playlists['offset'], playlist['uri'],  playlist['name']))
-        if playlists['next']:
-            playlists = spotifyObject.next(playlists)
-        else:
-            playlists = None
-    # print("playlistURIS: ", playlistURIS)
-
-    user_playlists = []
-
-    for i in playlistURIS:
-        user_playlists.append(spotifyObject.user_playlist_tracks(
-            user=SPOTIFY_USER_ID, playlist_id=i)['items'])
-
-    finalTracks = []
-
-    for user_playlist in user_playlists:
-        for item in user_playlist:
-            # if not item['track']['name'] in dict(finalTracks['name']).values():
-            finalTracks.append(
-                {"name": item['track']['name'], "track": item['track']['external_urls']['spotify']})
-    print((dict(finalTracks).keys()))
-    # spotifyObject.start_playback(context_uri=finalTracks[4]['track'])
-
-    # Only plays songs from user's playlists
-    found = False
-    for track in finalTracks:
-        if track["name"].lower() in song:
-            speak(f"Playing {track['name']}")
-            webbrowser.open(track["track"])
-            found = True
-            break
-
-    if not found:
-        speak(f"Couldn't find {song}")
-
-
-
-def authenticateSpotify2():  # no access token required
-    token = spotipy.util.prompt_for_user_token(
-        username=SPOTIFY["username"],
-        # SPOTIFY["scope"][0],
-        scope="user-read-playback-state",
-        client_id=SPOTIFY["client_id"],
-        client_secret=SPOTIFY["client_secret"],
-        redirect_uri=SPOTIFY["redirect_uri"],
-        cache_path=".cache-AnonymousIbex")  # C:\\Users\\Aritra Kar\\Desktop\\Python Projects\\Speech to Text\\
-    spotifyObject = spotipy.Spotify(auth=token)
-    devices = spotifyObject.devices()
-    print("devices: ", devices)
-
-
-def authenticateSpotifyAuthorization():
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-        client_id=SPOTIFY_CLIENT_ID, client_secret=SPOTIFY_CLIENT_SECRET, scope=SPOTIFY['scope'], redirect_uri=SPOTIFY_REDIRECT_URI))
-    results = sp.current_user_saved_tracks()['items']
-    #print("results: ", results)
-    for idx, item in enumerate(results['items']):
-        track = item['track']
-        print(idx, track['artists'][0]['name'], " – ", track['name'])
-'''
-
-
 def autheticateSpotify():
     spotifyObject = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIFY['client_id'],
                                                               client_secret=SPOTIFY['client_secret'],
@@ -422,23 +338,6 @@ def getSong(song, spotifyObject):
 
         try:
             items = results['tracks']['items']
-            '''
-            for item in items:
-                is_playing = spotifyObject.current_user_playing_track()[
-                    'is_playing']
-
-                if not is_playing:
-                    track = item
-                    #print("track: ", track)
-                    artist = track['artists'][0]['name']
-                    track_name = track['name']
-                    print(f"\ntrack['uri']: {track['uri']}")
-
-                    speak(f"Playing {track_name} by {artist}")
-                    spotifyObject.start_playback(
-                        device_id=deviceID, uris=[track['uri']])
-            '''
-
             for item in items:
                 spotifyObject.add_to_queue(uri=item['uri'], device_id=deviceID)
 
