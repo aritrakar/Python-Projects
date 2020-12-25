@@ -1,3 +1,3 @@
-Trying to make a chatbot that can interact with users without giving away that it's a robot. 
+1. Speech To Text: Contains code for a chatbot with and without a deep-learning approach, core.py and core-with-ai.py respectively. 
 
-arkbot1.py is a very basic implementation of a non-intelligent chatbot.
+2. V1: A very basic web-scraping dependent non-intelligent chatbot.
