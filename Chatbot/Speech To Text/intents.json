@@ -1,0 +1,176 @@
+{
+  "intents": [
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": [
+        "I'm sorry, I didn't understand what you said.",
+        "I'm not sure I understand.",
+        "I'm afraid I don't understand.",
+        "I'm not sure I'm following you."
+      ]
+    },
+    {
+      "tag": "greeting",
+      "patterns": ["hey", "hola", "hello", "good day", "hi"],
+      "responses": [
+        "Hello",
+        "Hi",
+        "Hello there",
+        "Great to see you again!",
+        "I'm ready",
+        "At your service",
+        "What's up"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "quit",
+        "exit",
+        "bye",
+        "see you later",
+        "goodbye",
+        "nice chatting to you, bye",
+        "until next time"
+      ],
+      "responses": [
+        "Bye!",
+        "Bye bye",
+        "See you later!",
+        "Bye, have a nice day!",
+        "Bye! Come back again soon.",
+        "May the Force be with you!",
+        "Live long and prosper!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "that's helpful",
+        "awesome, thanks",
+        "thanks for helping me",
+        "awesome"
+      ],
+      "responses": [
+        "You're welcome!",
+        "No problem!",
+        "Happy to help!",
+        "Any time!",
+        "My pleasure!"
+      ]
+    },
+    {
+      "tag": "asking",
+      "patterns": ["how are you", "how do you do"],
+      "responses": [
+        "I'm fine, thank you!",
+        "I'm great, how are you?",
+        "I'm A1",
+        "Never been better!"
+      ]
+    },
+    {
+      "tag": "options",
+      "patterns": [
+        "tell me about yourself",
+        "who are you",
+        "how can you help me",
+        "what you can do",
+        "how you can be helpful"
+      ],
+      "responses": [
+        "I'm Jarvis!",
+        "I'm JARVIS or Just A Rather Very Intelligent System!",
+        "The name's Jarvis, just Jarvis"
+      ]
+    },
+    {
+      "tag": "responses",
+      "patterns": [
+        "i'm fine",
+        "i'm great",
+        "i am fine",
+        "fine",
+        "i'm good",
+        "i am great"
+      ],
+      "responses": ["That's great!", "That's good to hear!", "Awesome!"]
+    },
+    {
+      "tag": "abuse",
+      "patterns": ["shit", "fuck", "damn"],
+      "responses": [
+        "There's no need to be rude!",
+        "Please mind your language!",
+        "!!!",
+        "Please don't abuse.",
+        "Aw, is someone having a bad day?",
+        "I'm sorry, can I help you?"
+      ]
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "get the weather",
+        "what's the weather like",
+        "what is it like outside"
+      ],
+      "responses": [""]
+    },
+    {
+      "tag": "calendar",
+      "patterns": ["what do i have", "do i have plans", "am i busy"],
+      "responses": []
+    },
+    {
+      "tag": "note",
+      "patterns": [
+        "note this",
+        "take a note",
+        "make a note",
+        "write this down",
+        "remember this"
+      ],
+      "responses": [""]
+    },
+    {
+      "tag": "document",
+      "patterns": ["create a document", "create a new document"],
+      "responses": [""]
+    },
+    {
+      "tag": "play_song",
+      "patterns": ["play songs", "play songs by", "make some music"],
+      "responses": [""]
+    },
+    {
+      "tag": "resume_song",
+      "patterns": ["resume", "resume playing", "resume the song"],
+      "responses": [""]
+    },
+    {
+      "tag": "pause_song",
+      "patterns": [
+        "pause",
+        "pause the song",
+        "pause playback",
+        "stop the music",
+        "stop"
+      ],
+      "responses": [""]
+    },
+    {
+      "tag": "open",
+      "patterns": ["open"],
+      "responses": [""]
+    },
+    {
+      "tag": "search",
+      "patterns": ["search", "search for", "look up"],
+      "responses": [""]
+    }
+  ]
+}
