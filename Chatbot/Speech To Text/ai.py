@@ -104,13 +104,10 @@ def bag_of_words(s, words):
 
 def getResponse(s):
     prediction = model.predict([bag_of_words(s, words)])[0]
-    #print("prediction: ", prediction)
     prediction_index = np.argmax(prediction)
     tag = labels[prediction_index]
-    print("tag: ", tag)
-    #print("prediction[prediction_index]: ", prediction[prediction_index])
+    #print("tag: ", tag)
     for tg in data["intents"]:
         if tg['tag'] == tag:
             responses = tg['responses']
-    # print(random.choice(responses))
     return (random.choice(responses), tag)
