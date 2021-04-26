@@ -23,12 +23,15 @@ class Card:
         self.suit = suit
         self.value = value
 
+    # getSuit() returns the suit of the Card
     def getSuit(self):
         return self.suit
 
+    # getValue() returns the value of the Card
     def getValue(self):
         return self.value
 
+    # printCard() prints a Card's suit symbol and value
     def printCard(self):
         print(unicodes[self.getSuit()], self.getValue())
 
