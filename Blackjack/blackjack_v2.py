@@ -5,6 +5,7 @@ from player import Player
 cards = card.initializeCards()
 
 
+# getCardSum(player) gets the total hand value of 'player'
 def getCardSum(player):
     result = 0
     aces = 0
@@ -26,6 +27,7 @@ def getCardSum(player):
     return result
 
 
+# split(amount, playerAgent, dealerAgent) simulates "splitting" of a hand
 def split(amount, playerAgent, dealerAgent):
     totalAmount = 0
     for roundNumber in range(0, 2):
@@ -38,6 +40,7 @@ def split(amount, playerAgent, dealerAgent):
     return totalAmount
 
 
+# deal(amount, bet, playerAgent) plays a single round of 21
 def deal(amount, bet, playerAgent):
     playerSum = getCardSum(playerAgent)
 
@@ -62,7 +65,7 @@ def deal(amount, bet, playerAgent):
             print("Continuing without splitting...")
 
     # PLAYER
-    choice = ''  # str(input("Hit (H) | Stand (S) | Double down (D): "))
+    choice = ''
     while (playerSum <= 21 or choice.lower() != 's'):
         if (playerSum == 21):
             print("Blackjack! You win this round!")
@@ -134,6 +137,7 @@ def deal(amount, bet, playerAgent):
     return amount
 
 
+# Main driver code
 def main():
     rounds = 0
     amt = 0
