@@ -12,4 +12,6 @@
  
 6. **Tic-Tac-Toe**: A Tic-Tac-Toe simulator implementing the Minimax algorithm (with and without Alpha-Beta pruning). 
 
-7. **WhatsApp**: Simple webscraping projects automating WhatsApp Web. 
+7. **Weather**: Simple weather logger that logs the weather for Waterloo, Canada in a CSV file.
+
+8. **WhatsApp**: Simple webscraping projects automating WhatsApp Web. 
