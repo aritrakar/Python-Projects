@@ -2,7 +2,7 @@
 
 core.py is the chatbot implemented without deep learning. core-with-ai.py implements a very simple neural network with Tensorflow and Tflearn, trained on the prompts and responses in the intents.json file. Certain functions of both chatbots are limited to Windows, for example opening Notepad. 
 
-#### "Jarvis" can do the following:
+#### "N.A.R.V.I.S" can do the following:
 
 1. Get the weather
 2. Get the next event on your Google Calendar using the Calendar API
